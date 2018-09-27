@@ -790,11 +790,13 @@ export class ODataGetBase extends BaseRequestHandler.BaseRequestHandler {
 
 			var models = req.app.models();
 			models.forEach(function (model) {
-				var modelObj:any = {};
-				var plural = commons.getPluralForModel(model);
-				modelObj.name = plural;
-				modelObj.url = plural;
-				json.push(modelObj);
+				if(model.shared){
+					var modelObj:any = {};
+					var plural = commons.getPluralForModel(model);
+					modelObj.name = plural;
+					modelObj.url = plural;
+					json.push(modelObj);
+				}
 			});
 
 			var serviceDocumentResult = new ServiceDocumentResult();

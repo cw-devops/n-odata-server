@@ -34,7 +34,9 @@ export class Metadata {
 		var appModels = this._app.models();  // have to do this because models will not be known in forEach
 
 		this._app.models().forEach((function (model) {
-
+			if(!model.shared){
+            	return;
+			}
 				var entityTypeObj:any = {
 					"@Name": model.definition.name
 				};
