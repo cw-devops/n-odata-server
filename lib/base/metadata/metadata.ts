@@ -139,9 +139,9 @@ export class Metadata {
 						{
 							"edmx:Edmx": {
 								"@xmlns:edmx": "http://schemas.microsoft.com/ado/2007/06/edmx",
-								"@xmlns:m": "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
 								"@Version": "1.0",
 								"edmx:DataServices": {
+									"@xmlns:m": "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
 									"@m:DataServiceVersion": "2.0",
 									"Schema": {
 										"@xmlns": "http://schemas.microsoft.com/ado/2008/09/edm",
