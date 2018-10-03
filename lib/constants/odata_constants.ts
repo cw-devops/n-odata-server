@@ -16,7 +16,5 @@ export =  {
 	/** OData Version 4.0 string */
 	ODATA_VERSION_4: '4.0',
 	/** Namespace that is used in metadata.xml */
-	ODATA_NAMESPACE: 'NODATASERVER'
+	ODATA_NAMESPACE: 'CWODATASERVER'
 };
-
-

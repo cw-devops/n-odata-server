@@ -144,6 +144,8 @@ export class Metadata {
 									"@xmlns:m": "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
 									"@m:DataServiceVersion": "2.0",
 									"Schema": {
+										"@xmlns:d":"http://schemas.microsoft.com/ado/2007/08/dataservices",
+										"@xmlns:m":"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
 										"@xmlns": "http://schemas.microsoft.com/ado/2008/09/edm",
 										"@Namespace": constants.ODATA_NAMESPACE,
 										EntityType,
