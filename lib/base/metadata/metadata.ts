@@ -143,20 +143,28 @@ export class Metadata {
 								"edmx:DataServices": {
 									"@xmlns:m": "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
 									"@m:DataServiceVersion": "2.0",
-									"Schema": {
-										"@xmlns:d":"http://schemas.microsoft.com/ado/2007/08/dataservices",
-										"@xmlns:m":"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
-										"@xmlns": "http://schemas.microsoft.com/ado/2008/09/edm",
-										"@Namespace": constants.ODATA_NAMESPACE,
-										EntityType,
-										Association,
-										"EntityContainer": {
-											"@Name": constants.ODATA_NAMESPACE,
-											"@m:IsDefaultEntityContainer": "true",
-											EntitySet,
-											AssociationSet
-										}
-									}
+									"Schema": [
+                    {
+                      "@xmlns:d":"http://schemas.microsoft.com/ado/2007/08/dataservices",
+										  "@xmlns:m":"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
+                      "@xmlns": "http://schemas.microsoft.com/ado/2008/09/edm",
+                      "@Namespace": constants.ODATA_NAMESPACE,
+                      EntityType: EntityType,
+                      Association: Association
+                    },
+                    {
+                      "@xmlns:d":"http://schemas.microsoft.com/ado/2007/08/dataservices",
+                      "@xmlns:m":"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata",
+                      "@xmlns": "http://schemas.microsoft.com/ado/2008/09/edm",
+                      "@Namespace": constants.ODATA_NAMESPACE+".Model",
+                      "EntityContainer": {
+                          "@Name": constants.ODATA_NAMESPACE+"Entities",
+                          "@m:IsDefaultEntityContainer": "true",
+                          EntitySet: EntitySet,
+                          AssociationSet: AssociationSet
+                      }
+                    }
+                  ]
 								}
 							}
 						}, {version: '1.0', encoding: 'UTF-8'}
